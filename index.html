@@ -40,15 +40,33 @@
           </a>
         </div>
 
-        <!-- Mobile Menu Icon -->
-        <button class="lg:hidden text-gray-300 hover:text-white focus:outline-none">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
+       <button id="mobile-menu-btn" class="lg:hidden text-gray-300 hover:text-white focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
         
       </div>
     </header>
+
+      <div id="mobile-sidebar" class="fixed inset-0 bg-black/50 z-[100] hidden opacity-0 transition-opacity duration-300">
+        <div class="fixed right-0 top-0 h-full w-64 bg-[#0a0f1c] p-6 transform translate-x-full transition-transform duration-300 shadow-2xl" id="sidebar-content">
+          <button id="close-menu-btn" class="text-white mb-8">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+          <nav class="flex flex-col gap-6 text-white text-lg">
+            <a href="#" class="menu-link">Home</a>
+            <a href="#about" class="menu-link">About</a>
+            <a href="#services" class="manu-link">Services</a>
+            <a href="#features" class="menu-link">Features</a>
+            <a href="#portfolio" class="menu-link">Portfolio</a>
+            <a href="#team" class="menu-link">Team</a>
+            <a href="#pricing" class="menu-link">Pricing</a>
+            <a href="#contact" class="menu-link">Contact</a>
+          </nav>
+        </div>
+      </div>
+    
 
     <!-- ================= MAIN CONTENT ================= -->
     <main>
@@ -84,7 +102,7 @@
             We are a passionate team of creative designers and developers, crafting stunning websites and providing comprehensive digital services that help businesses grow.
           </p>
 
-          <a href="#" class="hero-item opacity-0 bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-xl text-lg transition-all duration-300 shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)] hover:-translate-y-1">
+          <a href="#contact" class="hero-item opacity-0 bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-xl text-lg transition-all duration-300 shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)] hover:-translate-y-1">
             Send Inquiry
           </a>
 
@@ -428,183 +446,179 @@
       </section>
 
       <!-- 6. TEAM SECTION -->
-      <section id="team" class="reveal-on-scroll bg-[#0a0f1c] py-24 relative z-20">
-        <div class="max-w-350 mx-auto px-6">
+      <section id="team" class="reveal-on-scroll bg-[#0a0f1c] py-16 md:py-24 relative z-20">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <div class="text-center mb-16">
-            <div class="inline-block border border-gray-700/60 bg-gray-800/30 rounded-full px-5 py-1.5 mb-6 backdrop-blur-sm">
-              <span class="text-[11px] font-bold text-gray-300 tracking-widest uppercase">
-                The People
-              </span>
+            <div class="text-center mb-12 md:mb-16">
+              <div class="inline-block border border-gray-700/60 bg-gray-800/30 rounded-full px-5 py-1.5 mb-6 backdrop-blur-sm">
+                <span class="text-[11px] font-bold text-gray-300 tracking-widest uppercase">The People</span>
+              </div>
+              <h2 class="text-3xl md:text-5xl font-black mb-4">
+                <span class="text-transparent bg-clip-text bg-linear-to-r from-pink-400 to-purple-500">Our Team</span>
+              </h2>
+              <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto px-4">
+                Meet the dedicated professionals and tech experts who make it all happen.
+              </p>
             </div>
 
-            <h2 class="text-4xl md:text-5xl font-black mb-4">
-              <span class="text-transparent bg-clip-text bg-linear-to-r from-pink-400 to-purple-500">Our Team</span>
-            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+              
+              <div class="group bg-[#0f1523] rounded-2xl p-6 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-all duration-300 flex flex-col items-center text-center">
+                <span class="self-end border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Leadership</span>
+                
+                <div class="w-24 h-24 my-5 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
+                  <img src="/team-1.png" alt="Ferdenand Lawag Sabado" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
+                </div>
+                
+                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1">Ferdenand Lawag Sabado</h3>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6">Chief Executive Officer</p>
+                
+                <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
+                  <a href="#" class="hover:text-white transition-colors">IN</a>
+                  <span class="text-gray-700">|</span>
+                  <a href="#" class="hover:text-white transition-colors">EMAIL</a>
+                </div>
+              </div>
 
-            <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
-              Meet the dedicated professionals and tech experts who make it all happen.
-            </p>
+              <div class="group bg-[#0f1523] rounded-2xl p-6 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-all duration-300 flex flex-col items-center text-center">
+                <span class="self-end border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Tech Lead</span>
+                
+                <div class="w-24 h-24 my-5 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
+                  <img src="/team-2.png" alt="Ferdenand Lawag Sabado" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
+                </div>
+                
+                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1">Almar Madina</h3>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6">Head Technical Support in Hardware and Networking</p>
+                
+                <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
+                  <a href="#" class="hover:text-white transition-colors">IN</a>
+                  <span class="text-gray-700">|</span>
+                  <a href="#" class="hover:text-white transition-colors">EMAIL</a>
+                </div>
+              </div>
+
+              <div class="group bg-[#0f1523] rounded-2xl p-6 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-all duration-300 flex flex-col items-center text-center">
+                <span class="self-end border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Developer</span>
+                
+                <div class="w-24 h-24 my-5 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
+                  <img src="/team-3.png" alt="Ferdenand Lawag Sabado" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
+                </div>
+                
+                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1">Renier Trenuela</h3>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6">Backend / Laravel Specialist</p>
+                
+                <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
+                  <a href="#" class="hover:text-white transition-colors">IN</a>
+                  <span class="text-gray-700">|</span>
+                  <a href="#" class="hover:text-white transition-colors">EMAIL</a>
+                </div>
+              </div>
+
+              <div class="group bg-[#0f1523] rounded-2xl p-6 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-all duration-300 flex flex-col items-center text-center">
+                <span class="self-end border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Frontend Lead</span>
+                
+                <div class="w-24 h-24 my-5 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
+                  <img src="/team-4.png" alt="Ferdenand Lawag Sabado" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
+                </div>
+                
+                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1">Dexter John Chavez</h3>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6">Frontend / Wordpress Specialist</p>
+                
+                <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
+                  <a href="#" class="hover:text-white transition-colors">IN</a>
+                  <span class="text-gray-700">|</span>
+                  <a href="#" class="hover:text-white transition-colors">EMAIL</a>
+                </div>
+              </div>
+
+              <div class="group bg-[#0f1523] rounded-2xl p-6 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-all duration-300 flex flex-col items-center text-center">
+                <span class="self-end border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Communications</span>
+                
+                <div class="w-24 h-24 my-5 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
+                  <img src="/team-5.png" alt="Ferdenand Lawag Sabado" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
+                </div>
+                
+                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1">Hanan A. Naim</h3>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6">Frontend / Arabic Translator</p>
+                
+                <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
+                  <a href="#" class="hover:text-white transition-colors">IN</a>
+                  <span class="text-gray-700">|</span>
+                  <a href="#" class="hover:text-white transition-colors">EMAIL</a>
+                </div>
+              </div>
+
+              <div class="group bg-[#0f1523] rounded-2xl p-6 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-all duration-300 flex flex-col items-center text-center">
+                <span class="self-end border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Developer</span>
+                
+                <div class="w-24 h-24 my-5 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
+                  <img src="/team-6.png" alt="Ferdenand Lawag Sabado" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
+                </div>
+                
+                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1">Rafael Ryan Harnisch</h3>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6">Software Engineeringr</p>
+                
+                <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
+                  <a href="#" class="hover:text-white transition-colors">IN</a>
+                  <span class="text-gray-700">|</span>
+                  <a href="#" class="hover:text-white transition-colors">EMAIL</a>
+                </div>
+              </div>
+              
+              <div class="group bg-[#0f1523] rounded-2xl p-6 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-all duration-300 flex flex-col items-center text-center">
+                <span class="self-end border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Product Designer</span>
+                
+                <div class="w-24 h-24 my-5 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
+                  <img src="/team-7.png" alt="Ferdenand Lawag Sabado" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
+                </div>
+                
+                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1">Prince Albert Peñaflor</h3>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6">UI/UX Designer / Technical Support</p>
+                
+                <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
+                  <a href="#" class="hover:text-white transition-colors">IN</a>
+                  <span class="text-gray-700">|</span>
+                  <a href="#" class="hover:text-white transition-colors">EMAIL</a>
+                </div>
+              </div>
+
+              <div class="group bg-[#0f1523] rounded-2xl p-6 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-all duration-300 flex flex-col items-center text-center">
+                <span class="self-end border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Operators</span>
+                
+                <div class="w-24 h-24 my-5 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
+                  <img src="" alt="Ferdenand Lawag Sabado" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
+                </div>
+                
+                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1">Cecil Habac</h3>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6">Office Administrator</p>
+                
+                <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
+                  <a href="#" class="hover:text-white transition-colors">IN</a>
+                  <span class="text-gray-700">|</span>
+                  <a href="#" class="hover:text-white transition-colors">EMAIL</a>
+                </div>
+              </div>
+
+              <div class="group bg-[#0f1523] rounded-2xl p-6 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-all duration-300 flex flex-col items-center text-center">
+                <span class="self-end border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Technical Support</span>
+                
+                <div class="w-24 h-24 my-5 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
+                  <img src="" alt="Ferdenand Lawag Sabado" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
+                </div>
+                
+                <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1">Bong Rodilas</h3>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6">Technical Support in CCTV and Networking</p>
+                
+                <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
+                  <a href="#" class="hover:text-white transition-colors">IN</a>
+                  <span class="text-gray-700">|</span>
+                  <a href="#" class="hover:text-white transition-colors">EMAIL</a>
+                </div>
+              </div>
+
+            </div>
           </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            <!-- Member 1 -->
-            <div class="group relative bg-[#0f1523] rounded-2xl p-8 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center mt-4">
-              <span class="absolute top-4 right-4 border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Leadership</span>
-              
-              <div class="w-24 h-24 mb-5 mt-10 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
-                <img src="/team-1.png" alt="Ferdenand Lawag Sabado" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
-              </div>
-              
-              <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1 leading-tight">Ferdenand Lawag Sabado</h3>
-              <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6 flex-1">Chief Executive Officer</p>
-              
-              <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
-                <a href="#" class="hover:text-white transition-colors">IN</a>
-                <span class="text-gray-700">|</span>
-                <a href="#" class="hover:text-white transition-colors">EMAIL</a>
-              </div>
-            </div>
-
-            <!-- Member 2 -->
-            <div class="group relative bg-[#0f1523] rounded-2xl p-8 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center mt-4">
-              <span class="absolute top-4 right-4 border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Tech-Lead</span>
-              <div class="w-24 h-24 mb-5 mt-10 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
-                <img src="/team-2.png" alt="Almar Madina" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
-              </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1 leading-tight">Almar Madina</h3>
-              <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6 flex-1">Head Technical Support in Hardware and Networking</p>
-              <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
-                <a href="#" class="hover:text-white transition-colors">IN</a>
-                <span class="text-gray-700">|</span>
-                <a href="#" class="hover:text-white transition-colors">EMAIL</a>
-              </div>
-            </div>
-
-            <!-- Member 3 -->
-            <div class="group relative bg-[#0f1523] rounded-2xl p-8 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center mt-4">
-              <span class="absolute top-4 right-4 border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Developer</span>
-              <div class="w-24 h-24 mb-5 mt-10 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
-                <img src="/team-3.png" alt="Renier Trenuela" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
-              </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1 leading-tight">Renier Trenuela</h3>
-              <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6 flex-1">Backend / Laravel Specialist</p>
-              <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
-                <a href="#" class="hover:text-white transition-colors">IN</a>
-                <span class="text-gray-700">|</span>
-                <a href="#" class="hover:text-white transition-colors">EMAIL</a>
-              </div>
-            </div>
-
-            <!-- Member 4  -->
-            <div class="group relative bg-[#0f1523] rounded-2xl p-8 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center mt-4">
-              <span class="absolute top-4 right-4 border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Frontend Lead</span>
-              <div class="w-24 h-24 mb-5 mt-10 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
-                <img src="/team-4.png" alt="Dexter John Chavez" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
-              </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1 leading-tight">Dexter John Chavez</h3>
-              <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6 flex-1">Frontend / Wordpress Specialist</p>
-              <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
-                <a href="#" class="hover:text-white transition-colors">IN</a>
-                <span class="text-gray-700">|</span>
-                <a href="#" class="hover:text-white transition-colors">EMAIL</a>
-              </div>
-            </div>
-
-            <!-- Member 5 -->
-            <div class="group relative bg-[#0f1523] rounded-2xl p-8 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center mt-4">
-              <span class="absolute top-4 right-4 border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Communications</span>
-              <div class="w-24 h-24 mb-5 m-10 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
-                <img src="/team-5.png" alt="Hanan A. Naim" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
-              </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1 leading-tight">Hanan A. Naim</h3>
-              <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6 flex-1">Frontend / Arabic Translator</p>
-              <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
-                <a href="#" class="hover:text-white transition-colors">IN</a>
-                <span class="text-gray-700">|</span>
-                <a href="#" class="hover:text-white transition-colors">EMAIL</a>
-              </div>
-            </div>
-
-            <!-- Member 6 -->
-            <div class="group relative bg-[#0f1523] rounded-2xl p-8 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center mt-4">
-              <span class="absolute top-4 right-4 border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Core Developer</span>
-              <div class="w-24 h-24 mb-5 mt-10 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
-                <img src="/team-6.png" alt="Rafael Ryan Harnisch" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
-              </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1 leading-tight">Rafael Ryan Harnisch</h3>
-              <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6 flex-1">Software Engineering</p>
-              <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
-                <a href="#" class="hover:text-white transition-colors">IN</a>
-                <span class="text-gray-700">|</span>
-                <a href="#" class="hover:text-white transition-colors">EMAIL</a>
-              </div>
-            </div>
-
-            <!-- Member 7 -->
-            <div class="group relative bg-[#0f1523] rounded-2xl p-8 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center mt-4">
-              <span class="absolute top-4 right-4 border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Product Designer</span>
-              <div class="w-24 h-24 mb-5 mt-10 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
-                <img src="/team-7.png" alt="Prince Albert Peñaflor" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#0a0f1c]">
-              </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1 leading-tight">Prince Albert Peñaflor</h3>
-              <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6 flex-1">UI/UX Designer / Technical Support</p>
-              <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
-                <a href="#" class="hover:text-white transition-colors">IN</a>
-                <span class="text-gray-700">|</span>
-                <a href="#" class="hover:text-white transition-colors">EMAIL</a>
-              </div>
-            </div>
-
-            <!-- Member 8: -->
-            <div class="group relative bg-[#0f1523] rounded-2xl p-8 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center mt-4">
-              <span class="absolute top-4 right-4 border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Operators</span>
-              <div class="w-24 h-24 mb-5 mt-10 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
-                <img src="" alt="Cecil Habac" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#222]">
-              </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1 leading-tight">Cecil Habac</h3>
-              <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6 flex-1">Office Administrator</p>
-              <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
-                <a href="#" class="hover:text-white transition-colors">IN</a>
-                <span class="text-gray-700">|</span>
-                <a href="#" class="hover:text-white transition-colors">EMAIL</a>
-              </div>
-            </div>
-
-            <!-- Member 9 -->
-            <div class="group relative bg-[#0f1523] rounded-2xl p-8 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center mt-4">
-              <span class="absolute top-4 right-4 border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Technical Support</span>
-              <div class="w-24 h-24 mb-5 mt-10 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
-                <img src="" alt="Bong Rodilas" class="w-full h-full rounded-full border-4 border-[#0f1523] object-cover bg-[#222]">
-              </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1 leading-tight">Bong Rodilas</h3>
-              <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6 flex-1">Technical Support in CCTV and Networking</p>
-              <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
-                <a href="#" class="hover:text-white transition-colors">IN</a>
-                <span class="text-gray-700">|</span>
-                <a href="#" class="hover:text-white transition-colors">EMAIL</a>
-              </div>
-            </div>
-
-            <!-- Member 10:  -->
-            <div class="group relative bg-[#0f1523] rounded-2xl p-8 border border-gray-800/80 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center mt-4">
-              <span class="absolute top-4 right-4 border border-gray-700 rounded-full px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-gray-400">Hardware & Software Support</span>
-              <div class="w-24 h-24 mb-5 mt-10 rounded-full bg-linear-to-tr from-red-600 to-blue-600 p-0.75">
-                <img src="" alt="Joella Escamillan" class="w-full h-full rounded-full border-4 border-[#05070a] object-cover bg-[#222]">
-              </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-1 leading-tight">Joella Escamillan</h3>
-              <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-6 flex-1">Technical Support in Hardware and Software</p>
-              <div class="flex items-center gap-4 text-[11px] font-bold text-gray-500 uppercase tracking-widest mt-auto">
-                <a href="#" class="hover:text-white transition-colors">IN</a>
-                <span class="text-gray-700">|</span>
-                <a href="#" class="hover:text-white transition-colors">EMAIL</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+        </section>
 
       <!-- 7. PRICING SECTION -->
       <section id="pricing" class="reveal-on-scroll bg-[#0a0f1c] py-24 relative z-20">

@@ -142,3 +142,34 @@ if (mainContactForm) {
       });
   });
 }
+
+const menuBtn = document.getElementById('mobile-menu-btn');
+const sidebar = document.getElementById('mobile-sidebar');
+const sidebarContent = document.getElementById('sidebar-content');
+const closebtn = document.getElementById('close-menu-btn');
+const links = document.querySelectorAll('.menu-link');
+
+function openSidebar() {
+  sidebar.classList.remove('hidden');
+  setTimeout(() => {
+    sidebar.classList.remove('opacity-0');
+    sidebarContent.classList.remove('translate-x-full');
+  }, 10);
+}
+
+function closeSidebar() {
+  sidebar.classList.add('opacity-0');
+  sidebarContent.classList.add('translate-x-full');
+  setTimeout(() => {
+    sidebar.classList.add('hidden');
+  }, 300);
+}
+
+// Event Listeners
+menuBtn.addEventListener('click', openSidebar);
+closebtn.addEventListener('click', closeSidebar);
+sidebar.addEventListener('click', (e) => { if(e.target === sidebar) closeSidebar(); });
+
+links.forEach(link => {
+  link.addEventListener('click', closeSidebar);
+});
