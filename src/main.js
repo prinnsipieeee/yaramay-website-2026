@@ -125,7 +125,7 @@ if (mainContactForm) {
           confirmButtonColor: "#3b82f6" 
         });
         
-        form.reset();
+        mainContactForm.reset();
         closeModal();
       })
       .catch((error) => {
