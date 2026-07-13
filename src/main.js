@@ -143,6 +143,7 @@ if (mainContactForm) {
   });
 }
 
+//  SIDE BAR LOGIC
 const menuBtn = document.getElementById('mobile-menu-btn');
 const sidebar = document.getElementById('mobile-sidebar');
 const sidebarContent = document.getElementById('sidebar-content');
