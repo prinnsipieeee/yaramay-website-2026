@@ -120,7 +120,7 @@ if (mainContactForm) {
       .then(() => {
         Swal.fire({
           title: "Success!",
-          text: "Thank you for reaching out. Our team will get back to you shortly.",
+          text: "Thank you for reaching out. Our team will get back to you shortly.", 
           icon: "success",
           confirmButtonColor: "#3b82f6" 
         });
@@ -137,8 +137,9 @@ if (mainContactForm) {
         });
       })
       .finally(() => {
-        submitBtn.innerText = originalText;
-        submitBtn.disabled = false;
+      mainSubmitBtn.innerText = originalText;
+      mainSubmitBtn.disabled = false;
+      mainSubmitBtn.classList.remove("opacity-75", "cursor-not-allowed");
       });
   });
 }
